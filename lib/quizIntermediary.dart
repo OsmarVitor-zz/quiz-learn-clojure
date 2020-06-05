@@ -5,9 +5,9 @@ import 'package:quiz_learn_clojure/score.dart';
 import 'package:quiz_learn_clojure/question.dart';
 import 'answers.dart';
 
-class Quiz extends StatefulWidget {
+class QuizIntermediary extends StatefulWidget {
   @override
-  _QuizState createState() => _QuizState();
+  _QuizIntermediaryState createState() => _QuizIntermediaryState();
 }
 
 bool verifyEndQuiz(int number) {
@@ -16,7 +16,7 @@ bool verifyEndQuiz(int number) {
 
 int number = 0;
 
-class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
+class _QuizIntermediaryState extends State<QuizIntermediary> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,7 +49,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         width: 1000,
                         padding: EdgeInsets.only(
                             left: 73.0, right: 50.0, top: 60, bottom: 30),
-                        child: Text(questions[number].question)),
+                        child: Text(questionIntermediary[number].question)),
                     Container(
                       height: 300,
                       width: 300,
@@ -61,14 +61,14 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             padding: EdgeInsets.only(
                                 left: 0.0, right: 0.0, top: 10, bottom: 0),
                             child: RaisedButton(
-                                child: Text(answers[number].answers[0]),
+                                child: Text(answersIntermediary[number].answers[0]),
                                 color: Colors.green,
                                 textColor: Colors.white,
                                 shape: new RoundedRectangleBorder(
                                   borderRadius: new BorderRadius.circular(30.0),
                                 ),
                                 onPressed: () {
-                                  if (answers[number].isCorrect == 0)
+                                  if (answersIntermediary[number].isCorrect == 0)
                                     score.acertos++;
                                   else
                                     score.erros++;
@@ -110,14 +110,14 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             padding: EdgeInsets.only(
                                 left: 0.0, right: 0.0, top: 10, bottom: 0),
                             child: RaisedButton(
-                                child: Text(answers[number].answers[1]),
+                                child: Text(answersIntermediary[number].answers[1]),
                                 color: Colors.green,
                                 textColor: Colors.white,
                                 shape: new RoundedRectangleBorder(
                                   borderRadius: new BorderRadius.circular(30.0),
                                 ),
                                 onPressed: () {
-                                  if (answers[number].isCorrect == 1)
+                                  if (answersIntermediary[number].isCorrect == 1)
                                     score.acertos++;
                                   else
                                     score.erros++;
@@ -159,14 +159,14 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             padding: EdgeInsets.only(
                                 left: 0.0, right: 0.0, top: 10, bottom: 0),
                             child: RaisedButton(
-                                child: Text(answers[number].answers[2]),
+                                child: Text(answersIntermediary[number].answers[2]),
                                 color: Colors.green,
                                 textColor: Colors.white,
                                 shape: new RoundedRectangleBorder(
                                   borderRadius: new BorderRadius.circular(30.0),
                                 ),
                                 onPressed: () {
-                                  if (answers[number].isCorrect == 2)
+                                  if (answersIntermediary[number].isCorrect == 2)
                                     score.acertos++;
                                   else
                                     score.erros++;
@@ -208,14 +208,14 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             padding: EdgeInsets.only(
                                 left: 0.0, right: 0.0, top: 10, bottom: 0),
                             child: RaisedButton(
-                                child: Text(answers[number].answers[3]),
+                                child: Text(answersIntermediary[number].answers[3]),
                                 color: Colors.green,
                                 textColor: Colors.white,
                                 shape: new RoundedRectangleBorder(
                                   borderRadius: new BorderRadius.circular(30.0),
                                 ),
                                 onPressed: () {
-                                  if (answers[number].isCorrect == 3)
+                                  if (answersIntermediary[number].isCorrect == 3)
                                     score.acertos++;
                                   else
                                     score.erros++;

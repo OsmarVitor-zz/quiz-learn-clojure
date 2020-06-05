@@ -1,5 +1,8 @@
+import 'package:quiz_learn_clojure/quizAvanced.dart';
+import 'package:quiz_learn_clojure/quizIntermediary.dart';
+
 import 'about.dart';
-import 'quiz.dart';
+import 'quizBegner.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -36,8 +39,10 @@ class Home extends StatelessWidget {
                           borderRadius: new BorderRadius.circular(30.0),
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) => Quiz()));
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuizBegner()));
                         }),
                     RaisedButton(
                         child: Text('Intermediário'),
@@ -49,18 +54,8 @@ class Home extends StatelessWidget {
                           borderRadius: new BorderRadius.circular(30.0),
                         ),
                         onPressed: () {
-                           return AlertDialog(
-                              title: Text("Em breve!"),
-                              actions: <Widget>[
-                                FlatButton(
-                                    child: Text("Ok"),
-                                    onPressed: () {
-                                      Navigator.pushReplacement(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) => Home()));
-                                    })
-                              ]);
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => QuizIntermediary()));
                         }),
                     RaisedButton(
                         child: Text('Avançado'),
@@ -71,7 +66,10 @@ class Home extends StatelessWidget {
                         shape: new RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(30.0),
                         ),
-                        onPressed: () {}),
+                        onPressed: () {
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => QuizAvanced()));
+                        }),
                   ],
                 )),
             SizedBox(
