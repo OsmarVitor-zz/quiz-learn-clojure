@@ -1,6 +1,8 @@
-# quiz_learn_clojure
+## quiz_learn_clojure
 
-A new Flutter project.
+# Projeto desenvolvido para a primeira avaliação na matéria de Programação para Dispositivos Móveis na FATEC de Ribeirao Preto
+# Login: fatec 
+# Senha: fatec
 
 ## Getting Started
 
