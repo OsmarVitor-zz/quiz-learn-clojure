@@ -1,7 +1,7 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Users/vitorperez/development/flutter-config
-FLUTTER_APPLICATION_PATH=/Users/vitorperez/Documents/flutter/quiz-learn-clojure
-FLUTTER_TARGET=/Users/vitorperez/Documents/flutter/quiz-learn-clojure/lib/main.dart
+FLUTTER_APPLICATION_PATH=/Users/vitorperez/Documents/quiz-learn-clojure
+FLUTTER_TARGET=/Users/vitorperez/Documents/quiz-learn-clojure/lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
 OTHER_LDFLAGS=$(inherited) -framework Flutter
@@ -9,3 +9,4 @@ FLUTTER_FRAMEWORK_DIR=/Users/vitorperez/development/flutter-config/bin/cache/art
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1
 TRACK_WIDGET_CREATION=true
+DART_DEFINES=flutter.inspector.structuredErrors=true
