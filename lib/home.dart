@@ -1,17 +1,25 @@
 import 'package:quiz_learn_clojure/quizAvanced.dart';
 import 'package:quiz_learn_clojure/quizIntermediary.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'about.dart';
 import 'quizBegner.dart';
 import 'package:flutter/material.dart';
 
+Future<String> getCurrentUser() async {
+  FirebaseUser currentUser = await FirebaseAuth.instance.currentUser();
+  return currentUser.email;
+}
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String email = getCurrentUser().toString();
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.grey[700], title: Text('Learn Clojure!')),
+            backgroundColor: Colors.grey[700],
+            title: Text('Learn Clojure! | $email')),
         backgroundColor: Colors.grey[900],
         body: Center(
             child: Column(
@@ -54,8 +62,10 @@ class Home extends StatelessWidget {
                           borderRadius: new BorderRadius.circular(30.0),
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) => QuizIntermediary()));
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuizIntermediary()));
                         }),
                     RaisedButton(
                         child: Text('Avançado'),
@@ -67,8 +77,10 @@ class Home extends StatelessWidget {
                           borderRadius: new BorderRadius.circular(30.0),
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) => QuizAvanced()));
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuizAvanced()));
                         }),
                   ],
                 )),

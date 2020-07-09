@@ -15,7 +15,8 @@ bool verifyEndQuiz(int number) {
 
 int number = 0;
 
-class _QuizBegnerState extends State<QuizBegner> with SingleTickerProviderStateMixin {
+class _QuizBegnerState extends State<QuizBegner>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
