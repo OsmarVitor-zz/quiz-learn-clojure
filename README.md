@@ -1,8 +1,7 @@
 ## quiz_learn_clojure
 
 # Projeto desenvolvido para a primeira avaliação na matéria de Programação para Dispositivos Móveis na FATEC de Ribeirao Preto
-# Login: fatec 
-# Senha: fatec
+# O aplicativo contém o cadastro via Google Authentication, para entrar coloque um e-mail válido e uma senha maior de 6 dígitos
 
 ## Getting Started
 
